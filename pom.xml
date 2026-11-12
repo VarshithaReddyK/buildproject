@@ -48,21 +48,17 @@
     </dependencies>
 
     <!-- Nexus Repository Configuration -->
-    <distributionManagement>
+<distributionManagement>
+    <repository>
+        <id>maven-releases</id>
+        <url>http://18.210.139.255:8081/repository/maven-releases/</url>
+    </repository>
 
-        <repository>
-            <id>maven-releases</id>
-            <name>Nexus Maven Releases</name>
-            <url>http://18.210.139.255:8081/repository/maven-releases/</url>
-        </repository>
-
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <name>Nexus Maven Snapshots</name>
-            <url>http://18.210.139.255:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-
-    </distributionManagement>
+    <snapshotRepository>
+        <id>maven-snapshots</id>
+        <url>http://18.210.139.255:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
 
     <build>
         <finalName>${project.artifactId}-${project.version}</finalName>
